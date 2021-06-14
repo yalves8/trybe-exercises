@@ -1,6 +1,9 @@
+
 O que eu vou apreder na Trybe:
 
 -UNix
 -Bash
 -Git
+- HTML
+- CSS
 - Computação
