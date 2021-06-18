@@ -20,6 +20,7 @@ div:nth-of-type(2){
 
 div:nth-of-type(3){
     background-color: rgb(75, 175, 36);
+    width: 300px;
 }
 
 div:nth-of-type(4){
@@ -46,4 +47,8 @@ div:nth-of-type(4) h3:first-of-type{
 }
 div:nth-of-type(5) h3:first-of-type{
     color: rgb(218, 17, 17);
+}
+
+div:nth-of-type(2n+1){
+    font-style: italic;
 }
