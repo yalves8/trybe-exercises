@@ -1,0 +1,12 @@
+body{
+    background-image: linear-gradient(to left,rgb(90, 166, 209),gray);
+}
+
+header{
+    border-radius: 50px;
+    background-image: linear-gradient(to right, rgb(16, 130, 184),rgb(217, 161, 231));
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+
+}
