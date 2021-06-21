@@ -49,15 +49,18 @@ h1 {
     
   }
 
-  #premiacao h3{
+  #premiacao ul,h3{
       text-align: center;
+  }
+
+  #premiacao li{
+      display: inline;
   }
 
   
   
-  #premiacao ul {
-    text-align: center;
-  }
+  
+
   
     
 
