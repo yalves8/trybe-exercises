@@ -28,15 +28,17 @@ article{
     text-align: center;
     border: 2px solid black;
     
+    
 }
 
 #queanimal {
-    border:2px solid;
     
     display: inline-block;
     width: 50%;
     text-align: unset;
     border-radius: 40px;
+    border: outset;
+    border-color: rgb(217, 161, 231);
 
 }
 
@@ -88,3 +90,19 @@ thead{
     line-height: 25px;
 }
 
+#curioso {
+    position: absolute;
+    left:320px;
+    width: 100px;
+    height: 50px;
+    border-radius: 30%;
+    
+}
+
+#descricao {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+}
