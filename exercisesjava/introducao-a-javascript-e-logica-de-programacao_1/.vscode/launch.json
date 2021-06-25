@@ -8,7 +8,7 @@
 
         {
             "name": "Launch Program",
-            "program": "${workspaceFolder}/exercicio_10.js",
+            "program": "${workspaceFolder}/exercicio_11.js",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
