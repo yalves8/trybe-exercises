@@ -19,7 +19,7 @@ else if (salario >= 1595.05 & salario < 2594.92) {
         total = aliquotaInss - (aliquotaIR - parcelaIR);
         console.log(total);
         return;
-    
+
 
     }
     else {
@@ -64,9 +64,9 @@ else if (salario >= 2594.92 & salario < 5189.82) {
 
 
 }
-else if (salario >= 5189.82){
+else if (salario >= 5189.82) {
     aliquotaInss = aliquotaInss - 570.88;
-    if (aliquotaInss >= 4664.68){
+    if (aliquotaInss >= 4664.68) {
         aliquotaIR = aliquotaInss * 0.275;
         parcelaIR = 869.36;
         total = aliquotaInss - (aliquotaIR - parcelaIR);
