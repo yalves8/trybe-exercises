@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho"></div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho"></div>
+            <div id="segundoEUltimoFilhoDoFilho"></div>
+          </div>
+          Atenção!
+          <div id="terceiroFilho"></div>
+          <div id="quartoEUltimoFilho"></div>
+        </div>
+      </div>
+      <script>
+
+          const colorPai = document.querySelector('#elementoOndeVoceEsta').parentNode.parentNode;
+          colorPai.style.color = 'green';
+          document.getElementById('primeiroFilhoDoFilho').innerText = 'Yas';
+          //Acessar terceiroFilho a partir de pai
+          document.querySelector('#pai').firstElementChild.nextElementSibling.nextElementSibling;
+          //acessar o texto do pai a partir do pai
+          document.querySelector('#pai').firstElementChild.nextElementSibling.nextSibling;
+          //criar um filho para elementoOndeVoceEsta
+          let h1 = document.createElement('h1');
+          h1.innerText = 'H1 AQUI';
+          document.querySelector('#elementoOndeVoceEsta').appendChild(h1);
+          //criar um irmao para elementoOndeVoceEsta
+          let div = document.createElement('div');
+          document.querySelector('#pai').append(div);
+          //criar um filho para primeiroFilhoDoFilho
+          let h3 = document.createElement('h3');
+          h3.innerText = 'H3 AQUI';
+          document.querySelector('#primeiroFilhoDoFilho').appendChild(h3);
+          //A partir desse filho criado, acesse terceiroFilho .
+          document.getElementsByTagName('h3')[0].parentElement.parentElement.nextElementSibling;
+
+
+      </script>
+</body>
+</html>
