@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="GET">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome:
+                <input type="text" maxlength="40" id="nome" placeholder="max 50 caracteres" required>
+            </label>
+            <br><br>
+
+            <label for="email">E-mail:
+                <input type="email" maxlength="50" id="email" required>
+            </label>
+            <br><br>
+
+            <label for="cpf">CPF:
+                <input type="text" maxlength="11" id="cpf" required>
+            </label>
+            <br><br>
+
+            <label for="endereco">Endereço:
+                <input type="text" maxlength="200" id="endereco" required>
+            </label>
+            <br><br>
+
+            <label for="cidade">Cidade:
+                <input type="text" maxlength="28" id="cidade" required>
+            </label>
+            <br><br>
+
+            <label for="estado">Estado:
+                <select name="estado" id="estado" required>
+                    <option value="pe" selected>Pernambuco</option>
+                    <option value="am">Amazonas</option>
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="pb">Paraíba</option>
+                </select>
+            </label>
+            <br><br>
+            <legend>Tipo:</legend>
+            <label for="apt">
+                <input type="radio" id="apt" name="tipo" value="apt" required>Apartamento
+            </label>
+            <label for="casa">
+                <input type="radio" id="casa" name="tipo" value="casa" required>Casa
+            </label>
+            <br><br>
+
+        </fieldset>
+
+        <br><br>
+        <fieldset>
+            <legend>Dados do seu último emprego</legend>
+            <label for="resumo">Resumo do currículo:
+                <br>
+                <textarea name="resumo" id="resumo" cols="30" rows="5" maxlength="1000" required></textarea>
+            </label>
+            <br><br>
+            <label for="cargo">Cargo:
+                <input type="text" maxlength="40" id="cargo" required>
+            </label>
+            <br><br>
+            <label for="descricao">Descrição do cargo:
+                <input type="text" maxlength="500" id="descricao" required>
+            </label>
+            <br><br>
+            <label for="data">Data de Início:
+                <input type="date" name="data" id="data" required>
+            </label>
+            <br><br>
+        </fieldset>
+        <br>
+        <button type="submit"> Enviar</button>
+    </form>
+
+</body>
+
+</html>
