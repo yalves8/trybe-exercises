@@ -10,7 +10,7 @@
 
 <body>
     <form action="" method="GET">
-        <fieldset>
+        <!-- <fieldset>
             <legend>Dados Pessoais</legend>
             <label for="nome">Nome:
                 <input type="text" maxlength="40" id="nome" placeholder="max 50 caracteres" required>
@@ -39,10 +39,7 @@
 
             <label for="estado">Estado:
                 <select name="estado" id="estado" required>
-                    <option value="pe" selected>Pernambuco</option>
-                    <option value="am">Amazonas</option>
-                    <option value="rn">Rio Grande do Norte</option>
-                    <option value="pb">Paraíba</option>
+                    <option value="nada" id="default"></option> </option>
                 </select>
             </label>
             <br><br>
@@ -56,31 +53,39 @@
             <br><br>
 
         </fieldset>
-
+ -->
         <br><br>
         <fieldset>
             <legend>Dados do seu último emprego</legend>
             <label for="resumo">Resumo do currículo:
                 <br>
-                <textarea name="resumo" id="resumo" cols="30" rows="5" maxlength="1000" required></textarea>
+                <textarea name="resumo" id="resumo" cols="30" rows="5" maxlength="1000" name="resumo" required></textarea>
             </label>
             <br><br>
             <label for="cargo">Cargo:
-                <input type="text" maxlength="40" id="cargo" required>
+                <input type="text" maxlength="40" id="cargo" name="cargo" required>
             </label>
             <br><br>
             <label for="descricao">Descrição do cargo:
-                <input type="text" maxlength="500" id="descricao" required>
+                <input type="text" maxlength="500" id="descricao" name="descricao" required>
             </label>
             <br><br>
-            <label for="data">Data de Início:
-                <input type="date" name="data" id="data" required>
+            <label for="dia">Dia:
+                <input type="text" name="dia" id="dia" style="width:20px;"  min="1" max="31" required>
+            </label>
+            <label for="mes">Mês:
+                <input type="text" name="mes" id="mes" style="width:20px;"  min="1" max="12"  required>
+            </label>
+            <label for="ano">Ano:
+                <input type="text" name="ano" id="ano" style="width:30px;" required>
             </label>
             <br><br>
         </fieldset>
         <br>
-        <button type="submit"> Enviar</button>
+        <button type="submit" id="enviar"> Enviar</button>
     </form>
+
+    <script src="script.js"></script>
 
 </body>
 
