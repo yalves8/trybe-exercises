@@ -28,16 +28,7 @@ console.log(oddsAndEvens(num));
 const recursao = ((num) => (num <= 1) ? 1 : num * recursao(num - 1));
 console.log(recursao(10));
 
-const maiorPalavra = (frase) => {
-    let grande = "";
-    let separa = frase.split(" ");
-    separa.forEach(element => {
-        if(element.trim().length > grande.length){
-            grande = element.trim();
-        }
-    });
-    return grande;
-}
+const maiorPalavra = (frase) => frase.split(" ").sort((a,b) => b.length - a.length)[0];
 
 console.log(maiorPalavra('afs sadfs ggg d'));
 
