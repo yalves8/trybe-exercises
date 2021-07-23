@@ -18,6 +18,10 @@ console.log(testingScope(true));
 
 const num = [13, 3, 4, 10, 7, 2];
 
-const oddsAndEvens = (array) => array.sort((a,b) => a-b);
+const oddsAndEvens = (array) => array.sort((a, b) => a - b);
 
-console.log(oddsAndEvens(num))
+console.log(oddsAndEvens(num));
+
+
+const recursao = ((num) => (num <=1) ? 1 : num * recursao(num - 1));
+console.log(recursao(10));
