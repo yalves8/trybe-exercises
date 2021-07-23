@@ -14,3 +14,5 @@
   
   const testingScope = (escopo) => ((escopo === true) ? 'Não devo ser utilizada dora do meu escopo(if) ótimo, fui utilizada no escopo !': 'Não devo ser utilizada fora meu escopo (else)');
   console.log(testingScope(true));
+
+  
