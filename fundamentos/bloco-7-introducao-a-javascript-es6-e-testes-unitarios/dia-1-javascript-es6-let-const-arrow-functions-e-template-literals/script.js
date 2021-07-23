@@ -32,4 +32,3 @@ const maiorPalavra = (frase) => frase.split(" ").sort((a,b) => b.length - a.leng
 
 console.log(maiorPalavra('afs sadfs ggg d'));
 
-
