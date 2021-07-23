@@ -1,5 +1,7 @@
 // function testingScope(escopo) {
 
+const { max } = require("moment");
+
 //     if (escopo === true) {
 //       var ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
 //       ifScope = ifScope + ' ótimo, fui utilizada no escopo !';
@@ -23,5 +25,20 @@ const oddsAndEvens = (array) => array.sort((a, b) => a - b);
 console.log(oddsAndEvens(num));
 
 
-const recursao = ((num) => (num <=1) ? 1 : num * recursao(num - 1));
+const recursao = ((num) => (num <= 1) ? 1 : num * recursao(num - 1));
 console.log(recursao(10));
+
+const maiorPalavra = (frase) => {
+    let grande = "";
+    let separa = frase.split(" ");
+    separa.forEach(element => {
+        if(element.trim().length > grande.length){
+            grande = element.trim();
+        }
+    });
+    return grande;
+}
+
+console.log(maiorPalavra('afs sadfs ggg d'));
+
+
