@@ -58,5 +58,5 @@ function myRemoveWithoutCopy(arr, item) {
     return arr;
 }
 
-console.log(myRemoveWithoutCopy([1, 2, 3, 4], 3) );
+assert.strictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3),[1,2,3,4] );
 // console.log(myRemove([1, 2, 3, 4], 5));
