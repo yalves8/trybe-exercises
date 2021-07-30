@@ -1,4 +1,4 @@
-/* const listNames = ['Maria', 'Manuela', 'Jorge', 'Ricardo', 'Wilson'];
+const listNames = ['Maria', 'Manuela', 'Jorge', 'Ricardo', 'Wilson'];
 
 const verifyFirstLetter = (letter, names) => names.some((name) => name[0] === letter);
 
@@ -39,8 +39,5 @@ const verifyAges = (arr, minimumAge) => {
     return arr.every((idade) => idade.age >= minimumAge);
 }
 
-console.log(verifyAges(people, 18)); */
+console.log(verifyAges(people, 18));
 
-const points = [40, 100, 1, 5, 25, 10];
-points.sort((a, b) => a - b);
-console.log(points); // [1, 5, 10, 25, 40, 100]
