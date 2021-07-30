@@ -1,6 +1,7 @@
 const chama = (nomeC) => {
     const email = nomeC.toLowerCase().split(' ').join('_');
-    return {nomeC, email :  `${email}@trybe.com`};
+    const total = `Nome Completo: ${nomeC} email: ${email}`;
+    return total;
 };
 
 
@@ -13,4 +14,4 @@ const newEmployees = (chama) => {
     return employees;
 };
 
-console.log(newEmployees(chama));
+console.log(Object.values(newEmployees(chama)));
