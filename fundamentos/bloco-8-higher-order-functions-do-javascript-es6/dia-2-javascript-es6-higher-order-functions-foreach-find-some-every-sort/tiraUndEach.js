@@ -7,3 +7,13 @@ const se = (numero) => {
 
 
 numero.forEach(se);
+
+
+// ou
+
+
+numero.forEach((element) => {
+    if (element % 2 === 0) {
+        console.log(`${element} é divísivel por 2!`);
+    }
+});
