@@ -1,0 +1,24 @@
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.bordaPoke {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px ridge sandybrown;
+  border-radius: 8px;
+  width: 200px;
+  margin-bottom: 2px;
+  background-color: silver;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: skyblue;
+}
