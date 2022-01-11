@@ -1,8 +1,5 @@
 const {questionInt, questionFloat} = require('readline-sync');
 
-
-
-
 const convertImc = () => {
     const euPeso = questionInt('Qual seu peso? ');
     const euAltura = questionFloat('Qual sua altura? ');
