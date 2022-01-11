@@ -12,4 +12,4 @@ const sorte = () => {
     }
 }
 
-sorte();
+module.exports = {sorte};
