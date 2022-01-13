@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const leFuncao = require('./exercicio1');
 const leFuncao4 = require('./exercicio4');
 
-/* describe('Verifica funcao leFuncao', () => {
+describe('Verifica funcao leFuncao', () => {
     describe('Quando a funcao existe ', () => {
         describe('Resposta ', () => {
             it('Se é uma string ', () => {
@@ -15,7 +15,7 @@ const leFuncao4 = require('./exercicio4');
             })
         });
     });
-}); */
+});
 
 describe('Verifica leFuncao4 ', () => {
     describe('Quando a funcao existe ', () => {

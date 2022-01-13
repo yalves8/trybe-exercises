@@ -1,7 +1,7 @@
 const fs = require('fs');
 function createWriteFile(file, content) {
     try {
-        fs.writeFileSync(file, content, {flag : 'w'});
+        fs.writeFileSync(file, content);
         const leitura = fs.readFileSync(file,'utf-8');
         return 'ok';
     }
