@@ -24,10 +24,21 @@ app.post('/greetings', function (req, res) {
 
 
 //exercicio 5 e 6
-app.get('/simpsons', function (req, res) {
-    readJson().then((content) => res.status(200).json(content)).catch((err) => res.status(500).json({message: `${err.message}`}));    
+app.get('/simpsons', function (_req, res) {
+    const leitura = readJson().then((content) => res.status(200).json(content)).catch((err) => res.status(500).json({ message: `${err.message}` }));
+    return leitura;
 });
 
+//exercicio 7
+app.get('/simpsons/:id', function (req, res) {
+    const { id } = req.params;
+    const leitura = readJson().then((content) => {
+        const findArq = content.find((r) => r.id === id);
+        if (!findArq) return res.status(404).json({ message: 'Simpson not found!' });
+        res.status(200).json(findArq);
+    });
+    return leitura;
+});
 
 
 app.listen(3001, () => {
