@@ -23,10 +23,12 @@ app.post('/greetings', function (req, res) {
 });
 
 
-//exercicio5
+//exercicio 5 e 6
 app.get('/simpsons', function (req, res) {
-    readJson().then(() => res.status(200).json({message: 'Deu certo!' })).catch((err) => res.status(500).json({message: `${err.message}`}));    
+    readJson().then((content) => res.status(200).json(content)).catch((err) => res.status(500).json({message: `${err.message}`}));    
 });
+
+
 
 app.listen(3001, () => {
     console.log('Aplicação na porta 3001 ');
