@@ -5,7 +5,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const updateJson = (arq) => {
-    return fs.writeFile(arq, JSON.stringify(arq));    
+    return fs.writeFile('./simpson.json', JSON.stringify(arq));    
 };
 
 const readJson = () => {
