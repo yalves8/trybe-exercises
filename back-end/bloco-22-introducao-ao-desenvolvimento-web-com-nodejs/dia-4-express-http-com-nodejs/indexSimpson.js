@@ -5,7 +5,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const updateJson = (arq) => {
-    return fs.writeFile(arq, JSON.stringify(leitura));    
+    return fs.writeFile(arq, JSON.stringify(arq));    
 };
 
 const readJson = () => {

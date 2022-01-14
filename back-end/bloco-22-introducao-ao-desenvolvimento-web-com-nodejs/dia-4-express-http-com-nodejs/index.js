@@ -32,12 +32,22 @@ app.get('/simpsons', function (_req, res) {
 //exercicio 7
 app.get('/simpsons/:id', function (req, res) {
     const { id } = req.params;
-    const leitura = readJson().then((content) => {
+    readJson().then((content) => {
         const findArq = content.find((r) => r.id === id);
         if (!findArq) return res.status(404).json({ message: 'Simpson not found!' });
         res.status(200).json(findArq);
     });
-    return leitura;
+});
+
+//exercicio 8
+app.post('/simpsons', function(req,res) {
+    const { id, name} = req.body;
+    readJson().then((content) => {
+        content.push({id,name});
+        updateJson(content);
+        res.status(200).json(content);
+    });
+
 });
 
 
