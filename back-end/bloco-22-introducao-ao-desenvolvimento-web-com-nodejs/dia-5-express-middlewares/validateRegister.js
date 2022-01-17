@@ -1,3 +1,13 @@
+function geraStringAleatoria(tamanho) {
+    var stringAleatoria = '';
+    var caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for (var i = 0; i < tamanho; i++) {
+        stringAleatoria += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+    }
+    return stringAleatoria;
+};
+
+
 function validateName(req, res, next) {
     const { name } = req.body;
     if (!name || name === '' || name.length <= 3) return res.status(400).json({ message: 'Invalid name!' });
@@ -20,4 +30,5 @@ function validadePassword(req, res, next) {
 
 };
 
-module.exports = { validateName, validateEmail, validadePassword };
+
+module.exports = { validateName, validateEmail, validadePassword, geraStringAleatoria };
