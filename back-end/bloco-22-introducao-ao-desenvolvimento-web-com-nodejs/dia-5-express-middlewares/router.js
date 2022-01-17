@@ -1,5 +1,11 @@
 const router = require('express').Router();
-const { validateName, validateEmail, validadePassword, geraStringAleatoria } = require('./validateRegister');
+const axios = require('axios');
+
+const { validateName,
+    validateEmail,
+    validadePassword,
+    geraStringAleatoria,
+    validateToken } = require('./validateRegister');
 
 const register = [
 
@@ -17,9 +23,16 @@ router.post('/register', validateName, validateEmail, validadePassword, function
     res.status(201).json({ message: 'user created' });
 });
 
-router.post('/login', validateEmail, validadePassword, function (req, res) {
+router.post('/login', validateEmail, validadePassword, function (_req, res) {
     const randomToken = geraStringAleatoria(12);
     res.status(200).json({ token: randomToken });
+});
+
+//exercicio2
+router.get('/price', validateToken, async function(_req,res) {
+    const result = await axios.get('https://api.coindesk.com/v1/bpi/currentprice/BTC.json');
+    res.status(200).json(result.data);
+ 
 });
 
 module.exports = router;
