@@ -24,9 +24,9 @@ const posts = [
 ];
 
 //exercicio1
-router.get('/', function (_req, res) {
+/* router.get('/', function (_req, res) {
     res.status(200).json(register);
-});
+}); */
 
 router.post('/register', validateName, validateEmail, validadePassword, function (req, res) {
     const { name, email, password } = req.body;
@@ -53,6 +53,10 @@ router.get('/:id', function(req,res) {
     const findId = posts.find((user) => user.id === parseInt(id));
     if(!findId) return res.status(404).json({ message: "post not found" });
     res.status(201).json( findId );
-})
+});
+
+router.get('/', function (_req, res) {
+    res.status(200).json({ posts })
+});
 
 module.exports = router;
