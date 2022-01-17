@@ -1,5 +1,6 @@
 const res = require("express/lib/response");
 
+//exercicio1
 function geraStringAleatoria(tamanho) {
     var stringAleatoria = '';
     var caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -8,16 +9,6 @@ function geraStringAleatoria(tamanho) {
     }
     return stringAleatoria;
 };
-
-
-function validateToken(req, res, next) {
-    const token = req.headers.authorization;
-    const regexTok = !/^[a-zA-Z0-9]{12}$/;
-    if (!token || token.match(regexTok) )
-        return res.status(401).json({ message: 'invalid token' });
-
-    next();
-}
 
 
 function validateName(req, res, next) {
@@ -44,11 +35,21 @@ function validadePassword(req, res, next) {
 
 };
 
+//exercicio2
+function validateToken(req, res, next) {
+    const token = req.headers.authorization;
+    const regexTok = !/^[a-zA-Z0-9]{12}$/;
+    if (!token || token.match(regexTok))
+        return res.status(401).json({ message: 'invalid token' });
+
+    next();
+}
+
 
 module.exports = {
     validateName,
     validateEmail,
     validadePassword,
     geraStringAleatoria,
-    validateToken
+    validateToken,
 };

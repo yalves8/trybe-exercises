@@ -11,7 +11,19 @@ const register = [
 
 ];
 
+const posts = [
+    {
+        id: 1, name: 'Yasmin', post: 'Bom dia'
+    },
+    {
+        id: 2, name:'Leticia', post: 'Boa Tarde'
+    },
+    {
+        id:3, name:'Trybe', post:'VQV'
+    },
+];
 
+//exercicio1
 router.get('/', function (_req, res) {
     res.status(200).json(register);
 });
@@ -34,5 +46,13 @@ router.get('/price', validateToken, async function(_req,res) {
     res.status(200).json(result.data);
  
 });
+
+//exercicio3
+router.get('/:id', function(req,res) {
+    const {id} = req.params;
+    const findId = posts.find((user) => user.id === parseInt(id));
+    if(!findId) return res.status(404).json({ message: "post not found" });
+    res.status(201).json( findId );
+})
 
 module.exports = router;
