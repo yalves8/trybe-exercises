@@ -5,7 +5,7 @@ const Book = (sequelize, DataTypes) => {
       page_quantity: DataTypes.STRING,
     }, {
       timestamps: false,
-      //freezeTableName: true //buscar no banco de dados uma tabela com o mesmo nome User ao invés de Users
+      //freezeTableName: true /buscar no banco de dados uma tabela com o mesmo nome User ao invés de Users
       underscore: true, //usar o field
       tableName: "Books", // informações serão buscadas na tabela outracoisa
     });
