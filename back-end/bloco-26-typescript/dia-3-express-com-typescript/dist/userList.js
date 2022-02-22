@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.read = void 0;
+exports.write = exports.read = void 0;
 const promises_1 = __importDefault(require("fs/promises"));
 function read() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -22,3 +22,9 @@ function read() {
     });
 }
 exports.read = read;
+function write(data) {
+    return __awaiter(this, void 0, void 0, function* () {
+        yield promises_1.default.writeFile("./users.json", JSON.stringify(data));
+    });
+}
+exports.write = write;

@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const users_1 = __importDefault(require("./routes/users"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-const PORT = 8000;
+const PORT = 3000;
 app.get("/", (req, res) => {
     res.send("Express + TypeScript");
 });

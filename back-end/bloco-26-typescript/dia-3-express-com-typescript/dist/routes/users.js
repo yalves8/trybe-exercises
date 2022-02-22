@@ -10,11 +10,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-// import User from '../interfaces/User';
 const userList_1 = require("../userList");
+const userController_1 = require("../controllers/userController");
 const router = (0, express_1.Router)();
 router.get("/users", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const users = yield (0, userList_1.read)();
     return res.status(200).json(users);
 }));
+router.post("/user", userController_1.createUserController);
 exports.default = router;
