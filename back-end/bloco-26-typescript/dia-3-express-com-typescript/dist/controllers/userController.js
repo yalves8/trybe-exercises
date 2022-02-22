@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createUserController = void 0;
+exports.listUserById = exports.createUserController = void 0;
 const userList_1 = require("../userList");
 const User_1 = require("../interfaces/User");
 const createUserController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -26,3 +26,15 @@ const createUserController = (req, res) => __awaiter(void 0, void 0, void 0, fun
     }
 });
 exports.createUserController = createUserController;
+const listUserById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { id } = req.params;
+    try {
+        const list = yield (0, userList_1.read)();
+        const findId = list.filter((i) => i.id === id);
+        (findId ? res.status(200).json(findId) : res.status(401).json({ message: 'Não encontrado!' }));
+    }
+    catch (e) {
+        res.status(400).json({ message: e.message });
+    }
+});
+exports.listUserById = listUserById;

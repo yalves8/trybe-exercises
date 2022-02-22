@@ -18,4 +18,5 @@ router.get("/users", (req, res) => __awaiter(void 0, void 0, void 0, function* (
     return res.status(200).json(users);
 }));
 router.post("/user", userController_1.createUserController);
+router.get('/user/:id', userController_1.listUserById);
 exports.default = router;
