@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tsc && node ./dist/studentClass.js"
+    "dev": "npx tsc && node ./dist/studentClass.js",
+    "cafet": "npx tsc && node ./dist/cafeteriaClass.js"
   },
   "keywords": [],
   "author": "",
