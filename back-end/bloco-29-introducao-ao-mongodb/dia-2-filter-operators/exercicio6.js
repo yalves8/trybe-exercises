@@ -1,0 +1,1 @@
+db.heroes.countDocuments({"aspects.height": {$gte: 200}});

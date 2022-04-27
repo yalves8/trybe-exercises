@@ -1,0 +1,1 @@
+db.heroes.find({"aspects.eyeColor": "green"});

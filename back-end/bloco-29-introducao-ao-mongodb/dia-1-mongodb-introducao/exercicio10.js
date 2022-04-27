@@ -1,0 +1,1 @@
+db.books.find({"status": "MEAP"}, {"title":1, "authors": 1, "author": 1, _id: 1}).skip(5).limit(10);
