@@ -1,0 +1,1 @@
+db.heroes.findOne({"aspects.height": {$gt: 200}});
